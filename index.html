@@ -18,15 +18,16 @@
             <input type="button" value="Terminate" class="USB"  id = "terminate" onclick=""/>
             <input type="button" value="Reset" class="reset"  onclick="location.reload()"/>
         </div>
-    </header>
+    </header> <br>
 
     <div class="scrollbar">
         <table class="tableprocess">
-            <caption style="position: sticky; top:0;">
+            <caption style="position: sticky; top:0; background-color: #3D405B; 
+            font-size: 20px;font-family: 'Courier New', Courier, monospace;">
                 Process
             </caption>
             <thead>
-                <tr>
+                <tr style="background-color: #87ADF3;">
                     <th >ProcessID</th>
                     <th>Status</th>
                     <th>Arrival Time</th>
@@ -44,12 +45,13 @@
         </table>
     </div>
     <br />
-    <div style="text-align: center; background-color: #333; color:white; font-family: 'Arial', sans-serif;">Ready Queue</div>
+    <div class="RQ">
+        Ready Queue</div>
     <div class="scrollbar"> 
-        <table class="">
+        <table class="" >
             <thead>
                 <tr>
-                    <th colspan="2">Quantum Time = 3</th>
+                    <th colspan="2" style="background-color: #87ADF3;">Quantum Time = 3</th>
                 </tr>
             </thead>
             <tbody id="ReadyQueue1"></tbody>    
@@ -58,7 +60,7 @@
         <table class="">
             <thead>
                 <tr>
-                    <th colspan="2">Quantum Time = 5</th>
+                    <th colspan="2" style="background-color: #87ADF3;">Quantum Time = 5</th>
                 </tr>
             </thead>
             <tbody id="ReadyQueue2"></tbody>    
@@ -67,14 +69,14 @@
         <table class=""> 
             <thead>
                 <tr>
-                    <th colspan="2">FCFS</th>
-                </tr>
+                    <th colspan="2" style="background-color: #87ADF3;">FCFS</th>
+                </tr> <br>
             </thead>
             <tbody id="ReadyQueue3"></tbody>    
         </table>
-    </div>
-    <div class="box1">
-        <div class="scrollbar" style="width: 40% ;"> 
+    </div> <br>
+    <div class="box1" style="width: 100%;">
+        <div class="scrollbar" style="width: 35% ;"> 
             <table class="">
                 <caption>
                     I/O Device
@@ -82,7 +84,7 @@
                     <input type="button" value="Remove I/O" class="USB" id="removeio" onclick=""/>
                 </caption>
                 <thead>
-                    <tr>
+                    <tr style="background-color: #87ADF3;">
                         <th>ProcessID</th>
                         <th>Status</th>
                     </tr>
@@ -94,10 +96,9 @@
             <table class="tableprocess">
                 <caption>
                     Terminate
-                    
                 </caption>
                 <thead>
-                    <tr>
+                    <tr style="background-color: #87ADF3;">
                         <th>ProcessID</th>
                         <th>Status</th>
                         <th>Arrival Time</th>
@@ -106,11 +107,10 @@
                         <th>I/O Time</th>
                         <th>RespondTime</th>
                         <th>Turn around Time</th>
-                        
                     </tr>
                 </thead>
                 <tbody id="terminateTable"></tbody>
-            </table>
+            </table> <br>
         </div>
     </div>
 
