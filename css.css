@@ -1,0 +1,86 @@
+header{
+    margin-top: 0px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body{
+    font-family: 'Arial', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addjob ,.start ,.reset ,.ter,.CDQ,.USB{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+    margin: 3.5px;
+}
+.addjob:hover ,.start:hover  ,.ter:hover ,.CDQ:hover ,.USB:hover{
+    background-color: rgb(51, 255, 0);
+}
+.USB:hover{
+    background-color: rgb(255, 0, 0);
+}
+.reset:hover{
+    background-color: rgb(255, 238, 0);
+}
+caption {
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+
+}
+table {
+    border: 1px solid #333;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td{
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: center;
+}
+.scrollbar{
+    display: flex;
+    overflow-y: auto;
+    height: 250px;
+    margin: 0px;
+}
+.rdqio{
+    display: flex;
+    justify-content: space-around;  
+}
+.box1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+    
+}
+
+tr.running {
+    background-color: #58ff58; /* Green color for the running status */
+}
+tr.terminate {
+    background-color: #ff4f4f; /* Red color for the terminated status */
+}
+tr.ready {
+    background-color: #ffff52; /* Red color for the terminated status */
+}
+tr.waiting{
+    background-color: #ff9539;
+}

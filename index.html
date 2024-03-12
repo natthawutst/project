@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css.css" />
+    <title>Multilevel Feedback Queue</title>
+</head>
+
+<body onload="">
+    <header>
+        <h2>Multilevel Feedback Queue</h2>
+        <h3>Clock : <span id="clockTime">0</span> <br>
+            <span id="memoryUse"></span></h3>
+        <div class="btn">
+            <input type="button" value="Add Process" class="addjob" id ="addProcess" onclick=""/>
+            <input type="button" value="Terminate" class="USB"  id = "terminate" onclick=""/>
+            <input type="button" value="Reset" class="reset"  onclick="location.reload()"/>
+        </div>
+    </header>
+
+    <div class="scrollbar">
+        <table class="tableprocess">
+            <caption style="position: sticky; top:0;">
+                Process
+            </caption>
+            <thead>
+                <tr>
+                    <th >ProcessID</th>
+                    <th>Status</th>
+                    <th>Arrival Time</th>
+                    <th>Burst Time</th>
+                    <th>Waiting Time</th>
+                    <th>I/O Time</th>
+                    <th>RespondTime</th>
+                    <th>Memory USE</th>
+                    <th>Queue</th>
+                </tr>
+            </thead>
+            <tbody id="processTableBody">
+
+            </tbody>
+        </table>
+    </div>
+    <br />
+    <div style="text-align: center; background-color: #333; color:white; font-family: 'Arial', sans-serif;">Ready Queue</div>
+    <div class="scrollbar"> 
+        <table class="">
+            <thead>
+                <tr>
+                    <th colspan="2">Quantum Time = 3</th>
+                </tr>
+            </thead>
+            <tbody id="ReadyQueue1"></tbody>    
+        </table>
+
+        <table class="">
+            <thead>
+                <tr>
+                    <th colspan="2">Quantum Time = 5</th>
+                </tr>
+            </thead>
+            <tbody id="ReadyQueue2"></tbody>    
+        </table>
+
+        <table class=""> 
+            <thead>
+                <tr>
+                    <th colspan="2">FCFS</th>
+                </tr>
+            </thead>
+            <tbody id="ReadyQueue3"></tbody>    
+        </table>
+    </div>
+    <div class="box1">
+        <div class="scrollbar" style="width: 40% ;"> 
+            <table class="">
+                <caption>
+                    I/O Device
+                    <input type="button" value="Add I/O " class="CDQ" id="addio" onclick=""/>
+                    <input type="button" value="Remove I/O" class="USB" id="removeio" onclick=""/>
+                </caption>
+                <thead>
+                    <tr>
+                        <th>ProcessID</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="ioQueueTable"></tbody>
+            </table>
+        </div>
+        <div>
+            <table class="tableprocess">
+                <caption>
+                    Terminate
+                    
+                </caption>
+                <thead>
+                    <tr>
+                        <th>ProcessID</th>
+                        <th>Status</th>
+                        <th>Arrival Time</th>
+                        <th>Burst Time</th>
+                        <th>Waiting Time</th>
+                        <th>I/O Time</th>
+                        <th>RespondTime</th>
+                        <th>Turn around Time</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="terminateTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+<script type="module" src="./Controller.js"></script>
+
+</html>
